@@ -3,7 +3,7 @@ package com.web.travelAgency.service.implementations;
 import com.web.travelAgency.model.DTOs.HolidayDTO;
 import com.web.travelAgency.model.Holiday;
 import com.web.travelAgency.model.Location;
-import com.web.travelAgency.repository.HolidayRepository;
+import com.web.travelAgency.repository.IHolidayRepository;
 import com.web.travelAgency.service.interfaces.IHolidayService;
 import jakarta.annotation.Nullable;
 import org.springframework.stereotype.Service;
@@ -15,9 +15,9 @@ import java.util.List;
 @Service
 public class HolidayService implements IHolidayService {
 
-    private final HolidayRepository repository;
+    private final IHolidayRepository repository;
 
-    public HolidayService(HolidayRepository repository) {
+    public HolidayService(IHolidayRepository repository) {
         this.repository = repository;
     }
 

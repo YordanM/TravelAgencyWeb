@@ -2,7 +2,7 @@ package com.web.travelAgency.service.implementations;
 
 import com.web.travelAgency.model.DTOs.LocationDTO;
 import com.web.travelAgency.model.Location;
-import com.web.travelAgency.repository.LocationRepository;
+import com.web.travelAgency.repository.ILocationRepository;
 import com.web.travelAgency.service.interfaces.ILocationService;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +11,9 @@ import java.util.List;
 @Service
 public class LocationService implements ILocationService {
 
-    private final LocationRepository repository;
+    private final ILocationRepository repository;
 
-    public LocationService(LocationRepository repository) {
+    public LocationService(ILocationRepository repository) {
         this.repository = repository;
     }
 
